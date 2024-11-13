@@ -1,0 +1,484 @@
+
+/* GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --padding-header:80px 0; 
+    --color-primary: #0041de;
+    --color-secundary: #253050;
+    --color-bg: #fafafa;
+    --align-title: center;
+    --box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADER */
+#header{
+
+    width: 100%;
+    height: 100px;
+    padding: var(--padding-container);
+    margin: 0px auto;
+}
+
+#header img{
+    width: 15%;
+    float: left;
+    margin-left: 525px;
+
+}
+
+.header__button{
+    float: right;
+    padding-right: 60px;
+    padding-top: 20px;
+
+}
+
+.header__button a{
+    border: 1px solid white;
+    padding: 8px;
+    padding-top: 5px;
+    padding-right:10px;
+    text-decoration: none;
+    color: var(--color-secundary);
+    border-radius: 20px;
+    font-size: 0.8em;
+    box-shadow: 0px 0px 2px var(--color-primary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.header__button a:hover{
+    color: pink;
+}
+
+/* NAVEGADOR */
+
+
+/* Estilos para centrar el menú principal */
+#nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#nav > ul > li {
+    display: inline-block;
+    position: relative; /* Para que los submenús se posicionen correctamente */
+    margin-right: 15px;
+}
+
+#nav > ul > li > a {
+    text-decoration: none;
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+/* Estilos para las listas desplegables */
+#nav ul li ul {
+    display: none; /* Oculta inicialmente los submenús */
+    position: absolute; /* Para que el submenú se muestre en la posición correcta */
+    top: 100%; /* Alinea el submenú justo debajo del elemento principal */
+    left: 0;
+    width: 100%; /* Hace que el submenú ocupe el ancho del elemento principal */
+    background-color: white; /* Cambia el fondo según tu diseño */
+    padding: 4px;
+    list-style-type: none;
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+}
+
+#nav ul li ul li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid rgb(255, 205, 247);
+}
+
+#nav ul li ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-secundary);
+}
+
+/* Mostrar el submenú al pasar el mouse */
+#nav ul li:hover > ul {
+    display: block;
+}
+
+
+#nav ul li ul li a:hover{
+    background-color: rgb(252, 225, 243);
+    color: gray;
+    
+}
+
+
+/* PRIMER SECTION*/
+
+.section1 {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 50px;
+    position: relative;
+}
+
+.section1 img {
+    width: 95%; /* Ancho del 80% */
+    max-width: 100%; /* Evita que la imagen crezca más del 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Asegura el margen automático para centrado */
+    display: block; /* Evita espacios adicionales en línea */
+    border-radius: 15px;
+}
+
+.section1__article {
+    position: absolute;
+    top: 70px; /* Ajusta la distancia desde la parte superior */
+    left: 70px; /* Ajusta la distancia desde el lado izquierdo */
+    font-weight: bolder;
+    padding: 20px;
+    max-width: 350px; /* Ajusta el ancho según lo que necesites */
+    color: white; /* Color del texto para que sea legible */
+    border-radius: 8px; /* Opcional: para bordes redondeados */
+
+}
+
+.section1__precio-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f7fa;
+    border-radius: 8px 8px 0 0;
+    max-width: 350px;
+    margin-top: 50px;
+}
+
+.section1__precio-texto {
+    color: var(--color-secundary);
+}
+
+.section1__precio-texto p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-secundary);
+}
+
+.section1__precio-texto {
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-secundary);
+}
+
+.section1__info-icon {
+    font-size: 12px;
+    color: var(--color-primary); 
+}
+
+.section1__boton-reserva {
+    padding: 10px 20px;
+    background-color: var(--color-primary);;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.section1__boton-reserva:hover {
+    background-color: darkblue; 
+}
+
+.section1__info-adicional {
+    padding: 15px;
+    background-color: #f5f7fa;
+    font-size: 13px;
+    color: var(--color-secundary);
+    text-align: justify;
+    border-radius: 0 0 8px 8px;
+    max-width: 350px;
+    box-shadow: 0px 0px 10px inset rgb(194, 194, 194);
+}
+
+
+/*SEGUNDO SECTION*/
+.section2{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.section2__informacion {
+    text-align: center; 
+    color: var(--color-secundary); 
+    
+}
+
+.section__informacion h2 {
+    font-size: 24px; /* Tamaño de la fuente del título */
+    font-weight: bold; 
+   color:var(--color-secundary); 
+    margin: 0 0 15px 0; /* Margen inferior para separación con el párrafo */
+}
+
+.section2__informacion p {
+    font-size: 16px; /* Tamaño de la fuente del párrafo */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    color: var(--color-secundary); 
+    max-width: 80%; /* Limita el ancho del párrafo */
+    margin: 0 auto; 
+}
+
+/*Bloque de 3 articulos*/
+
+.bloque {
+    width: 90%; 
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+
+.bloque article {
+    width: 32%; /* Un tercio del contenedor para que quepan tres artículos */
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos dentro del artículo */
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 15px;
+}
+
+.bloque article img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 200px; /* Establece una altura uniforme para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su aspecto sin deformarse */
+    border-radius: 8px; 
+}
+
+.bloque article h3 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--color-secundary);
+}
+
+.bloque article p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--color-secundary);
+}
+
+.bloque article a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid var(--color-primary);
+    margin-top: 20px;
+}
+
+.bloque article a:hover {
+    background-color: #f0f0f0; 
+}
+
+/*Tercer section*/
+
+.lazo{
+    width: 80%;
+    margin: 0 auto;
+}
+.lazo img{
+    width: 100%;
+}
+
+/*Cuarto section*/
+.mapa_disneyland {
+    width: 80%; 
+    margin: 50px auto; 
+    text-align: center;
+}
+
+.mapa_disneyland img {
+    width: 80%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 20px auto; /* Centra la imagen y añade un poco de espacio en la parte superior e inferior */
+    border-radius: 20px; /* Bordes redondeados con un radio de 20px */
+}
+
+.mapa_disneyland h2 {
+    font-size: 34px;
+    margin-bottom: 30px; /* Espacio debajo del título */
+    color: var(--color-secundary);
+    font-weight: bolder;
+}
+
+.mapa_disneyland a{
+    display: inline-block;
+    margin-top: 20px; /* Añade un espacio de 20px entre la imagen y el enlace */
+    text-decoration: none;
+    color:pink;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid pink;
+}
+
+.mapa_disneyland a:hover{
+    background-color: #f0f0f0;
+}
+
+/* SECTION DE GALERIA */
+
+.section__galeria, .section__galeria2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 100px auto;
+    gap: 20px;
+}
+
+.section__galeria img, .section__galeria2 img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.galeria__article, .galeria2__article {
+    width: 55%;
+     /* Centra el contenido dentro del article */
+}
+
+.section__galeria2 {
+    flex-direction: row-reverse; /* Cambia el orden en la segunda sección */
+}
+
+.section__galeria h2, .section__galeria2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-secundary);
+}
+
+.section__galeria p, .section__galeria2 p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--color-secundary);
+}
+
+.section__galeria a, .section__galeria2 a {
+    display: inline-block;
+    margin-top: 15px; /* Añade espacio sobre el enlace */
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--color-primary);
+}
+
+.section__galeria a:hover, .section__galeria2 a:hover{
+    background-color: #f0f0f0;
+}
+
+
+/* FOOTER */
+
+.footer{
+    box-shadow: 0px 0px 10px gray;
+    width: 95%; 
+    margin: 40px auto;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+.footer__iconos h4{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: var(--color-secundary);
+}
+
+.footer__icon{
+    display: flex;
+    font-size: 30px;
+    margin:10px 0 50px 20px; 
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.footer__icon:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+.footer__contacto {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Coloca el <a> y <p> en columna */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    text-align: center;     /* Centra el texto dentro de los elementos */
+    gap: 20px; 
+}
+
+.footer__contacto a{
+    text-decoration: none;
+    color: var(--color-secundary);
+    border: 2px solid var(--color-secundary);
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.footer__contacto p{
+    color: var(--color-secundary);
+    font-size: 12px;
+}
+
+.footer__contacto a:hover{
+    color: white;
+    background-color: var(--color-secundary);
+}
+
+.footer__figure{
+    margin: 0; /* Elimina el margen predeterminado de figure */
+}
+
+.footer__figure img {
+    width: 200px;       /* Ajusta el tamaño de la imagen */
+    height: auto;      /* Mantiene la proporción de la imagen */
+}
